@@ -1,6 +1,6 @@
 @extends('admin/template.main')
 @section('title')
-    Bienvenido
+    Home | Panel de Administración
 @endsection
 
 @section('content')

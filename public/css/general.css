@@ -1,3 +1,62 @@
 body{
-  background-color: green;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+}
+
+nav{
+  margin-top: 5px;
+  margin-bottom: -100px;
+}
+
+#imgnav{
+  float: left;
+  margin-right: 40px;
+  padding: 5px;
+
+}
+#imgnav img{
+  width: 70px;
+}
+
+.navbar-header button{
+  margin-top: 20px;
+}
+
+.navbar-collapse ul{
+  margin-top: 10px;
+}
+
+section{
+  background-color: #D8D8D8;
+  margin-top: 0px;
+}
+
+
+footer{
+  margin-top: 5px;
+  height: 40px;
+  background-color: #555;
+  color:#D8D8D8;
+  line-height: 50px;
+  text-align: center;
+
+}
+
+/********dispositivos**********/
+
+
+@media screen and (min-width: 480px){
+
+}
+
+@media screen and (min-width: 767px){
+
+
+}
+
+@media screen and (min-width: 950px){
+
+  body{
+    margin: 5px 5% 0px 5%;
+  }
 }

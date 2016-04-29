@@ -1,1 +1,1 @@
-esto es el footer
+<span>Creado por @alxLZ</span>
