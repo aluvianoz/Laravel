@@ -2,15 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>@yield('title','Default')</title>
+    <title>@yield('title','Panel de administracion')</title>
     <link rel="stylesheet" href="{{asset('plugins/bootstrap/css/bootstrap.css')}}" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
     <header>
       @include('admin.template.partials.nav')
     </header>
-
-
 
       <section>
         @yield('content')
