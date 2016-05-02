@@ -15,25 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
-    return view('test.index');
-});
-/*
-Route::get('articles/{nombre?}',function($nombre = "no coloco nombre"){
-  echo "El nombre que has colocado es $nombre";
-});*/
-/*
-Route::group(['prefix' => 'articles'], function(){
-  Route::get('view/{article?}',function($article = "vacio"){
-    echo $article;
-  });
-});*/
+//ruta para admin
 
-Route::group(['prefix' => 'articles'], function(){
-
-  Route::get('view/{id}',[
-    'uses' => 'TestController@view',
-    'as' => 'articlesView'
-  ]);
-
+Route::group(['prefix' => 'admin'],function(){
+        Route::resource('users','UserController');
 });
