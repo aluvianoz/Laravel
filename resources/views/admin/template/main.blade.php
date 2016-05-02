@@ -14,9 +14,10 @@
       @include('admin.template.partials.nav')
     </header>
 
-      <section>
+      <div class="panel panel-success">
+        <div class="panel-heading">@yield('panel')</div>
         @yield('content')
-      </section>
+      </div>
 
       <footer>
         @include('admin.template.partials.footer')
