@@ -15,6 +15,7 @@
     </header>
 
       <div class="panel panel-success">
+         @include('flash::message')
         <div class="panel-heading">@yield('panel')</div>
         @yield('content')
       </div>
