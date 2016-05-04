@@ -14,7 +14,7 @@
       @include('admin.template.partials.nav')
     </header>
 
-      <div class="panel panel-success">
+      <div class="panel panel-default">
          @include('flash::message')
         <div class="panel-heading">@yield('panel')</div>
         @yield('content')

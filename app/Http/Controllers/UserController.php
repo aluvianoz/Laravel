@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\User;
 use Laracasts\Flash\Flash;
+use App\Http\Requests\UserRequest;
 
 class UserController extends Controller
 {
@@ -38,13 +39,13 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
           $user = new User($request->all());
           $user->password= bcrypt($request->password);
           $user->save();
           Flash::success("Se ha registrado ". $user->name ." de manera exitosa");
-         return redirect()->route('admin.users.index');
+          return redirect()->route('admin.users.index');
 
     }
 
@@ -67,7 +68,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('admin.users.edit')->with('user',$user);
     }
 
     /**
@@ -79,7 +81,15 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->type = $request->type;
+        $user->save();
+
+        Flash::success('El usuario '. $user->name .' ha sido actualizado correctamente');
+        return redirect()->route('admin.users.index');
+
     }
 
     /**
@@ -90,6 +100,9 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+        Flash::error("El usuario $user->name a sido eliminado satisfactoriamente");
+        return redirect()->route('admin.users.index');
     }
 }

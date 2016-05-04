@@ -1,23 +1,9 @@
 @extends('admin.template.main')
-@section('title', 'Crear Usuario')
-@section('panel','Crear Usuario')
+@section('title', 'Editar Usuario')
+@section('panel','Editar Usuario '. $user->name)
 @section('content')
-
-@if(count($errors) > 0)
-    <div class="alert alert-danger" role="alert">
-      <ul>
-
-
-
-    @foreach($errors->all() as $error)
-      <li>{{$error}}</li>
-
-    @endforeach
-    </ul>
-    </div>
-@endif
 <br>
-  {!! Form::open(['route' => 'admin.users.store', 'method' => 'POST', 'class' => 'form-horizontal']) !!}
+  {!! Form::Model($user,['route' => ['admin.users.update',$user->id], 'method' => 'PUT', 'class' => 'form-horizontal']) !!}
 
   <div class="form-group">
       {!! Form::label('name', 'Nombre' , ['class' => 'col-sm-2 col-xs-2 control-label'])!!}
@@ -34,12 +20,7 @@
     </div>
   </div>
 
-  <div class="form-group">
-      {!! Form::label('password', 'Contraseña' ,['class' => 'col-sm-2 col-xs-3 control-label'])!!}
-      <div class="col-sm-5 col-xs-7">
-      {!! Form::password('pasword', ['class'=> 'form-control', 'placeholder' => '********', 'required'])!!}
-      </div>
-  </div>
+  
 
   <div class="form-group">
       {!! Form::label('type', 'Tipo' ,['class' => 'col-sm-2 col-xs-2 control-label'])!!}
