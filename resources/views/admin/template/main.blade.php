@@ -16,8 +16,11 @@
 
       <div class="panel panel-default">
          @include('flash::message')
+         @include('admin.template.partials.errors')
         <div class="panel-heading">@yield('panel')</div>
+        <div class="panel-body">
         @yield('content')
+      </div>
       </div>
 
       <footer>

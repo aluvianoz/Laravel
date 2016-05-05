@@ -1,1 +1,1 @@
-<span>&copy{{ date('Y') }} | Creado por @alxLZ</span>
+<span> | Creado por @alxLZ &copy{{ date('Y') }} |</span>

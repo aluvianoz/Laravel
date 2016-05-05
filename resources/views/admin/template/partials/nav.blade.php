@@ -20,7 +20,7 @@
 
         <li><a href="#">Inicio<span class="sr-only">(current)</span></a></li>
         <li><a href="{{ route('admin.users.index') }}">Usuarios</a></li>
-        <li><a href="#">Categorías</a></li>
+        <li><a href="{{route('admin.categories.index')}}">Categorías</a></li>
         <li><a href="#">Artículos</a></li>
         <li><a href="#">Imágenes</a></li>
         <li><a href="#">Tags</a></li>
