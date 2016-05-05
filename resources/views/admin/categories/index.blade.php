@@ -25,7 +25,7 @@
 
   </tbody>
 </table>
-<div class="pagination">
+<div class="text-center">
   {!! $categories->render() !!}
 </div>
 
