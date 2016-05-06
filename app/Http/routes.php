@@ -22,7 +22,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'],function(){
         Route::get('users/{id}/destroy',['uses' => 'UserController@destroy', 'as' => 'admin.users.destroy']);
           //categorias
         Route::resource('categories','CategoryController');
-        Route::get('categories/{id}/destroy',['uses' => 'CategoryController@destroy', 'as' => 'admin.categories.destroy']);
+        Route::get('categories/{id}/destroy',[
+          'uses' => 'CategoryController@destroy', 'as' => 'admin.categories.destroy'
+        ]);
+        //tags
+        Route::resource('tags','TagController');
+        Route::get('tags/{id}/destroy',[
+          'uses' => 'TagController@destroy', 'as' => 'admin.tags.destroy'
+        ]);
 
 });
 
