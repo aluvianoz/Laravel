@@ -32,7 +32,7 @@
   <div class="form-group">
       {!! Form::label('type', 'Tipo' ,['class' => 'col-sm-2 col-xs-2 control-label'])!!}
       <div class="col-sm-5 col-xs-8">
-      {!! Form::select('type', ['member' => 'Miembro', 'admin' => 'Administrador'] ,null , ['class' => 'form-control'])!!}
+      {!! Form::select('type', ['member' => 'Miembro', 'admin' => 'Administrador'] ,null , ['class' => 'form-control', 'placeholder' => 'seleccione una opcion','required'])!!}
       </div>
   </div>
 
