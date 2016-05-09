@@ -31,6 +31,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'],function(){
           'uses' => 'TagController@destroy', 'as' => 'admin.tags.destroy'
         ]);
 
+        Route::resource('articles', 'ArticleController');
+
 });
 
 //rutas Login
