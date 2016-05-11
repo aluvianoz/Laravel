@@ -3,7 +3,7 @@
 @section('panel','Lista de Categorías')
 @section('content')
 <br>
-<a href="{{route('admin.categories.create')}}" class="btn btn-default" id="nwusr">Crear Nueva categoría <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+<a href="{{route('admin.categories.create')}}" class="btn btn-default pull-right" >Crear Nueva categoría <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
 <table class="table table-striped">
   <thead>
     <th>Id</th>

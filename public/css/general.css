@@ -32,10 +32,11 @@ section{
   margin-top: 0px;
 }
 
-#nwusr{
-  /*float: right;*/
-/*  margin:0px 20px 20px 0px;*/
+#search:hover{
+  background-color: #D8D8D8;
+
 }
+
 
 
 

@@ -3,7 +3,7 @@
 @section('panel','Lista de Usuarios')
 @section('content')
 <br>
-<a href="{{route('admin.users.create')}}" class="btn btn-default" id="nwusr">Registrar nuevo Usuario <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+<a href="{{route('admin.users.create')}}" class="btn btn-default pull-right" >Registrar nuevo Usuario <span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
 <br>
 <br>
   <table class="table table-striped">
