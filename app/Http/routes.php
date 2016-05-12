@@ -32,7 +32,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'],function(){
         ]);
 
         Route::resource('articles', 'ArticleController');
+        Route::get('articles/{id}/destroy',[
+          'uses' => 'ArticleController@destroy', 'as' => 'admin.articles.destroy'
+        ]);
 
+        Route::get('images',[
+          'uses'=> 'ImageController@index',
+          'as' => 'admin.images.index'
+        ]);
 });
 
 //rutas Login

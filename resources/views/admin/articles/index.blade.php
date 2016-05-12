@@ -31,7 +31,7 @@
       <td>{{$article->user->name}}</td>
       <td>
         <a href="{{route('admin.articles.edit',$article->id)}}" class="btn btn-warning"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-        <a href="{{route('admin.articles.destroy', $article->id)}}" class="btn btn-danger" onclick="return confirm('¿Deseas liminar la categoría?')"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
+        <a href="{{route('admin.articles.destroy', $article->id)}}" class="btn btn-danger" onclick="return confirm('¿Deseas liminar la el artículo?')"><span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
       </td>
     </tr>
     @endforeach
