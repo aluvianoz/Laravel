@@ -11,8 +11,10 @@ nav{
 
 #imgnav{
   float: left;
-  margin-right: 40px;
+  margin-right: 0px;
   padding: 5px;
+
+
 
 }
 #imgnav img{
@@ -37,7 +39,20 @@ section{
 
 }
 
+#sbut{
+  margin-left:20px;
+}
 
+.panelblog{
+  width: 99%;
+  display: inline-block;
+}
+
+.panelateral{
+  width: 29%;
+  display: none;
+  float: right;
+}
 
 
 
@@ -50,8 +65,7 @@ footer{
   line-height: 50px;
   text-align: center;
   font-style: 0.8em;
-  çline-height: 50px;
-
+  line-height: 50px;
 }
 
 /********dispositivos**********/
@@ -62,7 +76,12 @@ footer{
 }
 
 @media screen and (min-width: 767px){
-
+  .panelateral{
+    display:inline-block;;
+  }
+  .panelblog{
+    width: 70%;
+  }
 
 }
 
@@ -70,5 +89,11 @@ footer{
 
   body{
     margin: 5px 5% 0px 5%;
+  }
+  .panelateral{
+    display:inline-block;;
+  }
+  .panelblog{
+    width: 70%;
   }
 }

@@ -15,4 +15,7 @@
         </div>
       @endforeach
     </div>
+    <div class="text-center">
+      {!! $images->render() !!}
+    </div>
 @endsection
