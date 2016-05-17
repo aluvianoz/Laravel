@@ -5,7 +5,8 @@
       @foreach($categories as $category)
       <li class="list-group-item">
         <span class="badge">{{$category->articles->count()}}</span>
-        {{$category->name}}
+        <a href="{{route('front.search.category', $category->name)}}">{{$category->name}}</a>
+
       </li>
       @endforeach
     </ul>
@@ -16,7 +17,7 @@
   <div class="panel-heading">Tags</div>
   <div class="panel-body">
     @foreach($tags as $tag)
-    <span class="label label-primary">{{$tag->name}}</span>
+    <span class="label label-primary"><a href="{{route('front.search.tag', $tag->name)}}">{{$tag->name}}</a></span>
     @endforeach
 </div>
 </div>

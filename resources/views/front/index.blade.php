@@ -20,7 +20,7 @@
     <hr>
     <div class="pull-left">
       <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-      <a href="#">{{$article->category->name}}</a>
+      <a href="{{route('front.search.category', $article->category->name)}}">{{$article->category->name}}</a>
     </div>
     <div class="pull-right">
       <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
