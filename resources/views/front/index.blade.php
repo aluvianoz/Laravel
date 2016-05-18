@@ -6,11 +6,11 @@
 
 @foreach($articles as $article)
 <div class="panel panel-primary ">
-  <div class="panel-heading">{{$article->title}}</div>
+  <div class="panel-heading"><a href="{{route('front.view.article', $article->slug)}}">{{$article->title}}</a></div>
   <div class="panel-body">
     <div class="col-md-12"><!--div de ejemplo-->
 
-    <a href="#" class="thumbnail">
+    <a href="{{route('front.view.article', $article->slug)}}" class="thumbnail">
       @foreach($article->images as $image)
       <img src="{{asset('images/articles/'.$image->name)}}" alt="...">
       @endforeach
