@@ -37,8 +37,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'],function(){
           return view('admin.home');
         }]);
 
-        Route::resource('users','UserController');
-        Route::get('users/{id}/destroy',['uses' => 'UserController@destroy', 'as' => 'admin.users.destroy']);
+        Route::group(['middleware' => 'admin'], function(){
+          Route::resource('users','UserController');
+          Route::get('users/{id}/destroy',['uses' => 'UserController@destroy', 'as' => 'admin.users.destroy']);
+        });
+
           //categorias
         Route::resource('categories','CategoryController');
         Route::get('categories/{id}/destroy',[

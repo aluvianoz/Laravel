@@ -18,8 +18,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
 @if(Auth::user())
-        <li><a href="#">Inicio<span class="sr-only">(current)</span></a></li>
+        <li><a href="{{route('admin.home')}}">Inicio<span class="sr-only">(current)</span></a></li>
+        @if(Auth::user()->admin())
         <li><a href="{{ route('admin.users.index') }}">Usuarios</a></li>
+        @endif
         <li><a href="{{route('admin.categories.index')}}">Categorías</a></li>
         <li><a href="{{route('admin.articles.index')}}">Artículos</a></li>
         <li><a href="{{route('admin.images.index')}}">Imágenes</a></li>
